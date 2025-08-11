@@ -1,8 +1,7 @@
 /*
  * Global styles for Ohad Krispin's portfolio.
- * The design uses a minimalist, tech‑oriented palette with navy, white and
- * accent colours. Layout adapts to different screen sizes via flexbox
- * and CSS grid. Cards flip on click to reveal project details.
+ * Minimalist, tech-oriented palette with navy, white and accent color.
+ * Responsive grid; cards flip to reveal details.
  */
 
 :root {
@@ -11,15 +10,13 @@
   --color-accent: #00bcd4;
   --color-card-bg: #ffffff;
   --color-text: #1a1a1a;
+  --shadow: 0 8px 24px rgba(10, 31, 68, 0.08);
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
-  padding: 0;
   font-family: 'Poppins', sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
@@ -40,7 +37,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px rgba(0,0,0,.1);
 }
 
 nav {
@@ -66,7 +63,7 @@ nav {
   color: #fff;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color .3s;
 }
 
 .nav-links a:hover,
@@ -75,7 +72,7 @@ nav {
   outline: none;
 }
 
-/* Hero / Home section */
+/* Hero / Home */
 .hero {
   padding: 4rem 0;
   text-align: center;
@@ -89,11 +86,11 @@ nav {
 
 .hero p {
   max-width: 700px;
-  margin: 0.5rem auto;
+  margin: .5rem auto;
   font-size: 1rem;
 }
 
-/* Projects section */
+/* Projects */
 #projects {
   background: #fff;
   padding: 4rem 0;
@@ -106,119 +103,115 @@ nav {
   color: var(--color-nav);
 }
 
-.projects-grid {
-  display: grid;
+.projects-grid{
+  display:grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-/* Card component */
-.card {
+/* Card component (flip) */
+.card{
+  background: var(--color-card-bg);
+  border-radius: 16px;
+  height: 420px;                
   perspective: 1000px;
+  box-shadow: var(--shadow);
   cursor: pointer;
+  overflow: hidden;
 }
 
-.card-inner {
+.card-inner{
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.8s;
   transform-style: preserve-3d;
+  transition: transform .6s;
 }
 
-.card.flipped .card-inner {
+.card:hover .card-inner,
+.card:focus .card-inner,
+.card.flipped .card-inner{
   transform: rotateY(180deg);
 }
 
 .card-front,
-.card-back {
+.card-back{
   position: absolute;
-  width: 100%;
+  inset: 0;                     
   backface-visibility: hidden;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  background: var(--color-card-bg);
   display: flex;
   flex-direction: column;
-  height: 100%;
+  background: var(--color-card-bg);
 }
 
-.card-front img {
+/* Front */
+.card-front img{
   width: 100%;
-  height: 160px;
+  height: 185px;                 
   object-fit: cover;
   display: block;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
 
-.card-front h3 {
-  margin: 1rem;
-  font-size: 1.2rem;
+.card-front h3{
+  margin: 12px 16px 8px;
+  font-size: 1.1rem;
   color: var(--color-nav);
-  flex-grow: 1;
 }
 
-.card-back {
+/* Back */
+.card-back{
   transform: rotateY(180deg);
-  padding: 1rem;
-  justify-content: space-between;
+  padding: 16px;
+  gap: 10px;
+  overflow: auto;                
 }
 
-.card-back h3 {
-  margin-top: 0;
-  font-size: 1.2rem;
+.card-back h3{
+  margin: 0 0 6px 0;
+  font-size: 1.1rem;
   color: var(--color-nav);
 }
 
-.card-back p {
-  margin: 0.5rem 0;
-  font-size: 0.9rem;
-  flex-grow: 1;
-}
-
-.tech-list {
-  list-style: none;
-  padding: 0;
+.card-back p{
   margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  font-size: .95rem;
 }
 
-.tech-list li {
-  background: var(--color-accent);
-  color: #fff;
-  border-radius: 4px;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
+/* Tech chips */
+.tech-list{
+  display:flex; flex-wrap:wrap; gap: 8px;
+  padding:0; margin:8px 0 0 0;
 }
 
-.buttons {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+.tech-list li{
+  list-style:none;
+  background:#eef3f9;
+  color:#0a1f44;
+  border-radius: 12px;
+  padding: 6px 10px;
+  font-size: .85rem;
 }
 
-.buttons a {
-  text-decoration: none;
+/* Buttons */
+.buttons{
+  margin-top: auto;
+  display:flex; flex-wrap:wrap; gap:10px;
+}
+
+.buttons a{
+  text-decoration:none;
+  font-weight:600;
+  padding:10px 12px;
+  border-radius:10px;
   background: var(--color-nav);
-  color: #fff;
-  padding: 0.45rem 0.8rem;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  transition: background 0.3s;
+  color:#fff;
+  transition: transform .15s ease, opacity .2s ease;
 }
 
-.buttons a:hover,
-.buttons a:focus {
-  background: var(--color-accent);
-  outline: none;
-}
+.buttons a:nth-child(2){ background: var(--color-accent); color:#082336; }
+.buttons a:hover{ transform: translateY(-1px); opacity:.95; }
 
-/* Contact section */
+/* Contact */
 #contact {
   padding: 4rem 0;
   background: var(--color-bg);
@@ -245,12 +238,13 @@ nav {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  transition: color 0.3s;
+  transition: color .3s, transform .15s;
 }
 
 .contact-items a:hover,
 .contact-items a:focus {
   color: var(--color-accent);
+  transform: translateY(-1px);
   outline: none;
 }
 
@@ -260,18 +254,13 @@ footer {
   color: #fff;
   padding: 1rem 0;
   text-align: center;
-  font-size: 0.85rem;
+  font-size: .85rem;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 2rem;
-  }
-  .nav-links {
-    gap: 1rem;
-  }
-  .card-front img {
-    height: 140px;
-  }
+/* Responsive */
+@media (max-width: 600px){
+  .hero h1{ font-size: 2rem; }
+  .nav-links{ gap: 1rem; }
+  .card{ height: 420px; }        
+  .card-front img{ height: 170px; }
 }

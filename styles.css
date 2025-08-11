@@ -1,0 +1,277 @@
+/*
+ * Global styles for Ohad Krispin's portfolio.
+ * The design uses a minimalist, tech‑oriented palette with navy, white and
+ * accent colours. Layout adapts to different screen sizes via flexbox
+ * and CSS grid. Cards flip on click to reveal project details.
+ */
+
+:root {
+  --color-nav: #0a1f44;
+  --color-bg: #f5f7fa;
+  --color-accent: #00bcd4;
+  --color-card-bg: #ffffff;
+  --color-text: #1a1a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background: var(--color-nav);
+  color: #fff;
+  padding: 0.75rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--color-accent);
+  outline: none;
+}
+
+/* Hero / Home section */
+.hero {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--color-nav);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0.5rem auto;
+  font-size: 1rem;
+}
+
+/* Projects section */
+#projects {
+  background: #fff;
+  padding: 4rem 0;
+}
+
+#projects h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--color-nav);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card component */
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  background: var(--color-card-bg);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-front img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-front h3 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: var(--color-nav);
+  flex-grow: 1;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  padding: 1rem;
+  justify-content: space-between;
+}
+
+.card-back h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--color-nav);
+}
+
+.card-back p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  flex-grow: 1;
+}
+
+.tech-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-list li {
+  background: var(--color-accent);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.buttons a {
+  text-decoration: none;
+  background: var(--color-nav);
+  color: #fff;
+  padding: 0.45rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.buttons a:hover,
+.buttons a:focus {
+  background: var(--color-accent);
+  outline: none;
+}
+
+/* Contact section */
+#contact {
+  padding: 4rem 0;
+  background: var(--color-bg);
+  text-align: center;
+}
+
+#contact h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--color-nav);
+}
+
+.contact-items {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.contact-items a {
+  color: var(--color-nav);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-items a:hover,
+.contact-items a:focus {
+  color: var(--color-accent);
+  outline: none;
+}
+
+/* Footer */
+footer {
+  background: var(--color-nav);
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .nav-links {
+    gap: 1rem;
+  }
+  .card-front img {
+    height: 140px;
+  }
+}

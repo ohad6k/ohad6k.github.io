@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohad Krispin – Data &amp; ML Portfolio</title>
+    <!-- SEO meta tags -->
+    <meta
+      name="description"
+      content="Portfolio of Ohad Krispin – a data and machine‑learning enthusiast with strong visualization skills. Explore machine‑learning and Tableau projects, learn about his techniques and contact him for opportunities."
+    />
+    <meta
+      name="keywords"
+      content="Ohad Krispin, data science, machine learning, NLP, football prediction, text classification, Tableau, data visualization, portfolio"
+    />
+    <!-- Preconnect for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-p2cHf50p39ToMvr7zOj7AJGEylYSpU0CS7zT44B6kGJvtmCOIcKMdwLiLHZKfHTuD5KNR6Q07L9wrnZDVfX0Hg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header>
+      <nav class="container">
+        <div class="logo">Ohad&nbsp;Krispin</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Home / About section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Data &amp; Machine‑Learning Enthusiast</h1>
+        <p>
+          Hi, I'm <strong>Ohad Krispin</strong>, a data and machine‑learning
+          enthusiast based in Tirat Karmel, Israel. I enjoy transforming raw
+          information into actionable insights through predictive models and
+          intuitive visualizations. Whether it's forecasting football match
+          outcomes, processing natural language or crafting interactive
+          dashboards, I'm passionate about using data to tell compelling
+          stories.
+        </p>
+        <p>
+          I'm actively seeking opportunities in data science and analytics.
+          Explore my work below and feel free to reach out if you'd like to
+          collaborate.
+        </p>
+      </div>
+    </section>
+
+    <!-- Projects section -->
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="projects-grid">
+          <!-- Football match prediction project card -->
+          <div class="card" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front">
+                <img
+                  src="football_thumbnail.webp"
+                  alt="Football match prediction pipeline graphic"
+                />
+                <h3>Football Match Outcome Prediction</h3>
+              </div>
+              <div class="card-back">
+                <h3>Football Match Outcome Prediction</h3>
+                <p>
+                  Predicts Serie A football match results (win/draw/loss) using
+                  historical match data enriched with advanced feature
+                  engineering. The workflow includes data cleaning, feature
+                  engineering, model training, hyper‑parameter tuning and
+                  evaluation.
+                </p>
+                <ul class="tech-list">
+                  <li>Python</li>
+                  <li>Pandas</li>
+                  <li>Scikit‑learn</li>
+                  <li>Jupyter Notebook</li>
+                </ul>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/ohad6k/football-match-prediction"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo</a
+                  >
+                  <a
+                    href="https://raw.githubusercontent.com/ohad6k/football-match-prediction/main/Match_Prediction.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Read Report</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text classification / tokenization project card -->
+          <div class="card" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front">
+                <img
+                  src="text_classification_thumbnail.webp"
+                  alt="Text classification pipeline graphic"
+                />
+                <h3>Text Classification &amp; Tokenization</h3>
+              </div>
+              <div class="card-back">
+                <h3>Text Classification &amp; Tokenization</h3>
+                <p>
+                  Processes and classifies manually labelled articles. The
+                  pipeline loads labelled text, tokenizes and cleans it,
+                  removes stop‑words, performs stemming, vectorizes tokens
+                  with TF‑IDF and trains machine‑learning models including
+                  Naive Bayes, SVM and Random Forest. Clustering with
+                  K‑Means evaluates topic structure.
+                </p>
+                <ul class="tech-list">
+                  <li>Python</li>
+                  <li>NLTK</li>
+                  <li>Scikit‑learn</li>
+                  <li>Pandas</li>
+                </ul>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/ohad6k/Text-Labeling-Processing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tableau NBA dashboard project card -->
+          <div class="card" tabindex="0">
+            <div class="card-inner">
+              <div class="card-front">
+                <img
+                  src="basketball_dashboard_thumbnail.webp"
+                  alt="Basketball player performance dashboard graphic"
+                />
+                <h3>NBA Player Stats Dashboard</h3>
+              </div>
+              <div class="card-back">
+                <h3>NBA Player Stats Dashboard</h3>
+                <p>
+                  Interactive Tableau dashboards explore NBA player
+                  performance over time. Multiple views let you compare
+                  minutes played, points per minute and other metrics, filter
+                  by team or position, and highlight trends across the
+                  2024–2025 season. Data preprocessed in Python from a
+                  Kaggle CSV dataset.
+                </p>
+                <ul class="tech-list">
+                  <li>Tableau Public</li>
+                  <li>CSV Data</li>
+                  <li>Python</li>
+                </ul>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/ohad6k/Visualizations-projcet-NBA-player-stats-2024-2025"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub Repo</a
+                  >
+                  <a
+                    href="https://public.tableau.com/app/profile/ohad.krispin/viz/ExplorePlayerPerformanceOverTimeDashboard/Dashboard1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >View&nbsp;Visualization</a
+                  >
+                  <a
+                    href="https://raw.githubusercontent.com/ohad6k/Visualizations-projcet-NBA-player-stats-2024-2025/main/Tableau%20Visualizations%20Projcet%20NBA%20Player%20Stats%202024-2025.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Read Report</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-items">
+          <a href="mailto:ohad6k@example.com" title="Send me an email"
+            ><i class="fa-solid fa-envelope"></i> Email</a
+          >
+          <a
+            href="https://github.com/ohad6k"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub profile"
+            ><i class="fa-brands fa-github"></i> GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/ohad-krispin"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="LinkedIn profile"
+            ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Ohad Krispin. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

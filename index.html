@@ -1,254 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ohad Krispin – Data &amp; ML Portfolio</title>
-    <!-- SEO meta tags -->
-    <meta
-      name="description"
-      content="Portfolio of Ohad Krispin – a data and machine‑learning enthusiast with strong visualization skills. Explore machine‑learning and Tableau projects, learn about his techniques and contact him for opportunities."
-    />
-    <meta
-      name="keywords"
-      content="Ohad Krispin, data science, machine learning, NLP, football prediction, text classification, Tableau, data visualization, portfolio"
-    />
-    <!-- Preconnect for Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font Awesome for icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-p2cHf50p39ToMvr7zOj7AJGEylYSpU0CS7zT44B6kGJvtmCOIcKMdwLiLHZKfHTuD5KNR6Q07L9wrnZDVfX0Hg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css?v=5" />
-  </head>
-  <body>
-    <!-- Header / Navigation -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ohad Krispin | Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="custom-cursor"></div>
+  <div class="frame">
     <header>
-      <nav class="container">
-        <div class="logo">Ohad&nbsp;Krispin</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="logo">OHAD KRISPIN</div>
+      <div class="subtitle">( ISRAEL )</div>
     </header>
-    <!-- Home / About section -->
-    <section id="home" class="hero">
-      <div class="container">
-        <h1>Portfolio – Ohad Krispin</h1>
-        <p>
-          Hi, I'm Ohad Krispin. I work across data analysis, visualization, and software projects,
-          creating practical solutions from raw information. My work spans machine learning models,
-          interactive dashboards, statistical analysis, and other problem-solving tools.
-        </p>
-        <p>
-          Explore the projects below — ranging from sports analytics to text processing and feel free
-          to connect if you’d like to collaborate or share ideas.
-        </p>
-      </div>
-    </section>
 
+    <main>
+      <section class="hero">
+        <div class="hero-content reveal">
+          <h1 class="hero-title">
+            <span class="word">BUILDER</span><br>
+            <span class="word outline-text">ARCHITECT</span><br>
+            <span class="word">CREATOR</span>
+          </h1>
+          <p class="bio">
+            <span class="bio-lead">Hi, I’m Ohad Krispin.</span>
+            <br><br>
+            I’m a B.Sc. Information Systems graduate, specializing in <span class="keyword">Artificial
+              Intelligence</span>, with a strong focus on building real, <span class="keyword">end to end</span>
+            products.
+            <br><br>
+            I work across data analysis, visualization, and modern web development, using <span
+              class="keyword">AI</span> and advanced prompt engineering to architect and build complex applications
+            <span class="keyword">from scratch</span>, from concept to a live, working product.
+            <br><br>
+            My projects, WeaverBI and Coffocus, reflect how I use AI not just as a tool, but as a core part of the
+            development process. This includes designing systems, shaping data flows, building interactive dashboards,
+            and turning ideas into usable, <span class="keyword">production ready</span> software.
+            <br><br>
+            I enjoy solving practical problems, creating clean and intuitive interfaces, and pushing the boundaries of
+            how AI can accelerate and enhance product development.
+          </p>
+        </div>
+        <div class="hero-visual reveal">
+          <img src="new.png" alt="AI Builder Avatar" class="hero-avatar">
+        </div>
+      </section>
 
-    <!-- Projects section -->
-    <section id="projects">
-      <div class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-          <!-- Football match prediction project card -->
-          <div class="card" tabindex="0">
-            <div class="card-inner">
-              <div class="card-front">
-                <img
-                  src="football_thumbnail.webp"
-                  alt="Football match prediction pipeline graphic"
-                />
-                <h3>Football Match Outcome Prediction</h3>
+      <section class="projects">
+        <div class="section-label">SELECTED WORKS</div>
+
+        <!-- WeaverBI -->
+        <div class="project-item reveal">
+          <div class="project-info">
+            <h2>WEAVER<span class="highlight">BI</span></h2>
+            <p class="description">
+              Business Intelligence & Chart Builder Platform.
+              Implemented dashboards, dataset manager, chart builder, and advanced visualizations (3D charts, heatmaps,
+              scientific graphs).
+              Includes integrated database (Postgres on Render) and Google OAuth authentication.
+            </p>
+            <div class="project-bottom">
+              <div class="tags">
+                <span>React</span> <span>AI-Assisted</span> <span>Render</span> <span>Postgres</span>
+                <span>Visualization</span>
               </div>
-              <div class="card-back">
-                <h3>Football Match Outcome Prediction</h3>
-                <p>
-                  Predicts Serie A football match results (win/draw/loss) using
-                  historical match data enriched with advanced feature
-                  engineering. The workflow includes data cleaning, feature
-                  engineering, model training, hyper‑parameter tuning and
-                  evaluation.
-                </p>
-                <ul class="tech-list">
-                  <li>Python</li>
-                  <li>Pandas</li>
-                  <li>Scikit‑learn</li>
-                  <li>Jupyter Notebook</li>
-                </ul>
-                <div class="buttons">
-                  <a
-                    href="https://github.com/ohad6k/football-match-prediction"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >GitHub Repo</a
-                  >
-                  <a
-                    href="https://raw.githubusercontent.com/ohad6k/football-match-prediction/main/Match_Prediction.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >Read Report</a
-                  >
-                </div>
+              <div class="links">
+                <a href="https://weaverbi-marketing.vercel.app" target="_blank" class="btn">MARKETING SITE <i
+                    class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://weaver-bi.vercel.app/" target="_blank" class="btn btn-outline">LAUNCH APP</a>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Text classification / tokenization project card -->
-          <div class="card" tabindex="0">
-            <div class="card-inner">
-              <div class="card-front">
-                <img
-                  src="text_classification_thumbnail.webp"
-                  alt="Text classification pipeline graphic"
-                />
-                <h3>Text Classification &amp; Tokenization</h3>
+        <!-- Coffocus -->
+        <div class="project-item reverse reveal">
+          <div class="project-info">
+            <h2>COF<span class="highlight-alt">FOCUS</span></h2>
+            <p class="description">
+              Interactive Productivity Workspace.
+              Designed OS-like workspace including widgets, dock navigation, custom boards, and animated UI components.
+              Integrated Supabase Postgres.
+            </p>
+            <div class="project-bottom">
+              <div class="tags">
+                <span>Productivity</span> <span>OS-Sim</span> <span>Supabase</span> <span>Postgres</span>
+                <span>React</span>
               </div>
-              <div class="card-back">
-                <h3>Text Classification &amp; Tokenization</h3>
-                <p>
-                  Processes and classifies manually labelled articles. The
-                  pipeline loads labelled text, tokenizes and cleans it,
-                  removes stop‑words, performs stemming, vectorizes tokens
-                  with TF‑IDF and trains machine‑learning models including
-                  Naive Bayes, SVM and Random Forest. Clustering with
-                  K‑Means evaluates topic structure.
-                </p>
-                <ul class="tech-list">
-                  <li>Python</li>
-                  <li>NLTK</li>
-                  <li>Scikit‑learn</li>
-                  <li>Pandas</li>
-                </ul>
-                <div class="buttons">
-                  <a
-                    href="https://github.com/ohad6k/Text-Labeling-Processing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >GitHub Repo</a
-                  >
-                </div>
+              <div class="links">
+                <a href="https://coffocus.vercel.app" target="_blank" class="btn">LAUNCH WORKSPACE <i
+                    class="fa-solid fa-arrow-right"></i></a>
               </div>
             </div>
           </div>
-
-<!-- Tableau NBA dashboards -->
-<div class="card" tabindex="0">
-  <div class="card-inner">
-    <div class="card-front">
-      <img
-        src="basketball_dashboard_thumbnail.webp"
-        alt="NBA dashboards thumbnail"
-      />
-      <h3>NBA Player Stats (Tableau)</h3>
-    </div>
-
-    <div class="card-back">
-      <h3>NBA Player Stats (Tableau)</h3>
-      <p>Five dashboards to explore 2024–25 player performance with simple filters and comparisons.</p>
-
-      <div>
-        <ul class="tech-list" style="margin-bottom: 10px;">
-          <li>Tableau Public</li>
-          <li>CSV</li>
-          <li>Python</li>
-        </ul>
-        
-        <div class="buttons">
-
-         <!-- GitHub -->
-          <a
-            href="https://github.com/ohad6k/Visualizations-projcet-NBA-player-stats-2024-2025"
-            target="_blank" rel="noopener noreferrer"
-          >GitHub</a>
-          <!-- Read Report  -->
-          <a
-            class="btn-accent"
-            href="https://raw.githubusercontent.com/ohad6k/Visualizations-projcet-NBA-player-stats-2024-2025/main/Tableau%20Visualizations%20Projcet%20NBA%20Player%20Stats%202024-2025.pdf"
-            target="_blank" rel="noopener noreferrer"
-          >Read Report</a>
-
-          <!-- Individual dashboards -->
-          <a
-            href="https://public.tableau.com/app/profile/ohad.krispin/viz/ExplorePlayerPerformanceOverTimeDashboard/Dashboard1?publish=yes"
-            target="_blank" rel="noopener noreferrer"
-          >Over Time</a>
-
-          <a
-            href="https://public.tableau.com/app/profile/ohad.krispin/viz/PlayerEfficiencyByRoleDashboard/Dashboard2?publish=yes"
-            target="_blank" rel="noopener noreferrer"
-          >By Role</a>
-
-          <a
-            href="https://public.tableau.com/app/profile/ohad.krispin/viz/TeamMetricDashboard/Dashboard3?publish=yes"
-            target="_blank" rel="noopener noreferrer"
-          >Team</a>
-
-          <a
-            href="https://public.tableau.com/app/profile/ohad.krispin/viz/GameScoreDistributionDashboard/Dashboard4?publish=yes"
-            target="_blank" rel="noopener noreferrer"
-          >Score Dist.</a>
-
-          <a
-            href="https://public.tableau.com/app/profile/ohad.krispin/viz/PlayerShootingDashboard/Dashboard5?publish=yes"
-            target="_blank" rel="noopener noreferrer"
-          >Shooting</a>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <div class="contact-items">
-          <a href="mailto:ohadkrispin@gmail.com" title="Send me an email"
-            ><i class="fa-solid fa-envelope"></i> Email</a
-          >
-          <a
-            href="https://github.com/ohad6k"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="GitHub profile"
-            ><i class="fa-brands fa-github"></i> GitHub</a
-          >
-          <a
-            href="https://www.linkedin.com/in/ohad-krispin-239ba6330/"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="LinkedIn profile"
-            ><i class="fa-brands fa-linkedin"></i> LinkedIn</a
-          >
-        </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer>
-      <div class="container">
-        <p>&copy; 2025 Ohad Krispin. All rights reserved.</p>
+      <div class="footer-build-text">
+        Built end to end by me, from concept and architecture to deployment.
+      </div>
+      <div class="contact-strip">
+        <a href="mailto:ohadkrispin@gmail.com">EMAIL</a>
+        <span>/</span>
+        <a href="https://github.com/ohad6k" target="_blank">GITHUB</a>
+        <span>/</span>
+        <a href="https://www.linkedin.com/in/ohad-krispin-239ba6330/" target="_blank">LINKEDIN</a>
+      </div>
+      <div class="copyright">
+        &copy; 2025 OHAD KRISPIN. ALL RIGHTS RESERVED.
       </div>
     </footer>
+  </div>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
+
 </html>

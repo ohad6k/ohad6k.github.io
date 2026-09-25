@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ohad Krispin | Barcelona v Osasuna possession replay from StatsBomb open data</title>
+  <meta name="description" content="A 27.7 second replay of one Barcelona possession, built from StatsBomb open data event data and 360 freeze-frames, with every number recomputed from the raw files and every filled-in motion labelled.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F2F0E4; --ink: #1a1a1a; --muted: #55524a; --rule: #d6d2c2;
+      --accent: #FF5722; --green: #009688; --panel: #fbfaf5;
+      --heading: 'Anton', Impact, 'Arial Narrow', sans-serif;
+      --body: 'Space Mono', ui-monospace, Consolas, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.65; padding: 40px 16px 64px; }
+    .wrap { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+    a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .back { font-size: 13px; text-transform: uppercase; letter-spacing: .08em; }
+    .kicker { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+    h1 { font-family: var(--heading); font-weight: 400; font-size: clamp(34px, 6vw, 60px); line-height: 1.02; text-transform: uppercase; margin-top: 8px; text-wrap: balance; }
+    h1 .score { color: var(--accent); }
+    h2 { font-family: var(--heading); font-weight: 400; font-size: 24px; text-transform: uppercase; letter-spacing: .02em; margin-bottom: 12px; }
+    p { max-width: 68ch; }
+    .lede { font-size: 16px; margin-top: 16px; }
+    figure { display: flex; flex-direction: column; gap: 10px; }
+    video { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; display: block; border: 3px solid var(--ink); }
+    figcaption { font-size: 13px; color: var(--muted); }
+    .honest { border-left: 4px solid var(--accent); background: var(--panel); padding: 14px 18px; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    ul { padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+    .table-wrap { overflow-x: auto; }
+    table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+    th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+    th { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; }
+    td.n { font-variant-numeric: tabular-nums; white-space: nowrap; font-weight: 700; }
+    footer { border-top: 2px solid var(--ink); padding-top: 18px; display: flex; gap: 18px; align-items: flex-start; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); }
+    footer img { height: 34px; width: auto; }
+    footer .lines { display: flex; flex-direction: column; gap: 6px; flex: 1 1 300px; }
+    @media (max-width: 640px) { .two { grid-template-columns: 1fr; } body { padding-top: 24px; } }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <a class="back" href="../">&larr; Ohad Krispin</a>
+
+    <header>
+      <div class="kicker">La Liga 2020/21 &middot; 29 Nov 2020 &middot; 72nd minute &middot; possession 167</div>
+      <h1>Barcelona <span class="score">4-0</span> Osasuna: one possession, corner to goal</h1>
+      <p class="lede">A Barcelona corner is headed clear, recovered on the right, worked to Messi, and ends in a left-foot shot from 20.1 yards that goes in. The whole possession takes 13.8 seconds. This replay rebuilds it from StatsBomb open data, and it says on screen which parts were recorded and which are filled in.</p>
+    </header>
+
+    <figure>
+      <video src="film.mp4" controls playsinline preload="metadata" muted></video>
+      <figcaption>27.7 s, 1080p, 60 fps, no sound. Positions come from 10 frozen moments; the motion between them is filled in, and faded figures were outside the broadcast camera's view at that moment.</figcaption>
+    </figure>
+
+    <p class="honest"><strong>What this is:</strong> a visualization of event data plus 360 freeze-frames. It isn't tracking data, and nothing in it is read from video. No position was recorded during Messi's 3.46 second carry.</p>
+
+    <section class="two">
+      <div>
+        <h2>Measured</h2>
+        <ul>
+          <li>10 moments, one per event timestamp that has a 360 freeze-frame. At each, every player inside the camera's view is placed where StatsBomb recorded them.</li>
+          <li>Event locations, pass end points, the shot location, xG and timestamps.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Filled in</h2>
+        <ul>
+          <li>All movement between the 10 moments, in straight eased lines, and the ball's arcs.</li>
+          <li>Players outside the camera's view, shown faded at a held position.</li>
+          <li>Run cycles, the keeper's dive, the ball in the net, the crowd and the slow motion. The 16 extra lines around the real shot illustrate xG 0.06; they are not data.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>The numbers, recomputed from the raw files</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Measure</th><th>Value</th><th>From</th></tr></thead>
+          <tbody>
+            <tr><td>Osasuna in the box at the corner, incl. the keeper</td><td class="n">10</td><td>corner freeze-frame, visible players</td></tr>
+            <tr><td>Clearance, headed, distance from the goal line</td><td class="n">8.3 yd</td><td>clearance event</td></tr>
+            <tr><td>Recovery on the right after the clearance</td><td class="n">5.1 s</td><td>event timestamps</td></tr>
+            <tr><td>Nearest Osasuna player at the receipt</td><td class="n">0.6 yd</td><td>360 freeze-frame</td></tr>
+            <tr><td>Messi's carry</td><td class="n">24.5 yd, 3.46 s</td><td>carry start, end and duration</td></tr>
+            <tr><td>Shot distance to the goal centre, left foot</td><td class="n">20.1 yd</td><td>shot event</td></tr>
+            <tr><td>Nearest Osasuna player at the shot</td><td class="n">0.5 yd</td><td>360 freeze-frame</td></tr>
+            <tr><td>Osasuna within 5 yd of the ball at the shot</td><td class="n">3</td><td>360 freeze-frame</td></tr>
+            <tr><td>Shot xG (StatsBomb)</td><td class="n">0.06, about 1 in 17</td><td>shot event</td></tr>
+            <tr><td>Corner to shot</td><td class="n">13.8 s</td><td>event timestamps</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:12px;font-size:13px;color:var(--muted)">Counts are of players the camera saw, so they are lower bounds. Distances are in StatsBomb pitch units (yards).</p>
+    </section>
+
+    <footer>
+      <img src="statsbomb-logo.png" alt="StatsBomb">
+      <div class="lines">
+        <span>Data: StatsBomb open data (github.com/hudl/open-data), event data and 360 freeze-frames, used under its non-commercial user agreement. The raw data is not republished here.</span>
+        <span>An independent visualization sample. Not affiliated with or endorsed by StatsBomb, Hudl, LaLiga, FC Barcelona or CA Osasuna.</span>
+        <span>Made by Ohad Krispin with Claude, 2026.</span>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
